@@ -3,7 +3,7 @@
 from django.conf.urls import url, include
 from rest_framework.routers import SimpleRouter
 
-from views import ParkViewSet, ParkDataViewSet
+from .views import ParkViewSet, ParkDataViewSet
 
 
 router = SimpleRouter()
