@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from django.conf.urls import url, include
+from django.urls import re_path as url, include
 from rest_framework.routers import SimpleRouter
 
 from .views import ParkViewSet, ParkDataViewSet
