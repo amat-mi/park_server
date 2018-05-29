@@ -5,8 +5,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import list_route
 from rest_framework.response import Response
 
-from models import Park, ParkData
-from serializers import ParkSerializer, ParkDataSerializer
+from .models import Park, ParkData
+from .serializers import ParkSerializer, ParkDataSerializer
 
 
 #################################################
@@ -54,6 +54,6 @@ class ParkDataViewSet(viewsets.ReadOnlyModelViewSet):
               return build_message_response('OK')
           else:
               return build_error_response(serializer.errors)
-      except Exception, exc:
+      except Exception as exc:
           return build_exception_response()
          
