@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from django.conf.urls import patterns, url, include
+from django.conf.urls import url, include
 from rest_framework.routers import SimpleRouter
 
 from views import ParkViewSet, ParkDataViewSet
@@ -14,6 +14,7 @@ router.register(r'parkdata', ParkDataViewSet)
 
 
 ##### Aggiunta degli url ####################################
-urlpatterns =  patterns('',
+app_name = 'park'
+urlpatterns =  [
     url(r'^', include(router.urls)),    
-)
+]
