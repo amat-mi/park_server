@@ -27,3 +27,4 @@ class ParkDataSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = ParkData
+    fields = '__all__'
