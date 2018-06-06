@@ -39,7 +39,7 @@ class ParkDataViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         res = super(ParkDataViewSet,self).get_queryset()
-        last_pk = self.request.REQUEST.get('last_pk',None)
+        last_pk = self.request.query_params.get('last_pk',None)
         return res.filter(pk__gt=last_pk) if last_pk else res
  
     @list_route(methods=['PUT'])
